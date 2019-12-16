@@ -45,4 +45,5 @@ jobs:
           script:
             - ssh-add $SHIPPABLEPUSHPUBLICREPOS_PRIVATE_KEY_PATH
             - ssh -T git@github.com || true
+            - git config --global user.name 'shippable-push-public-repos'
             - cd $KENDOINTLREPO_STATE && git checkout -b test && git commit -m 'alabala' --allow-empty && git push -u origin test
