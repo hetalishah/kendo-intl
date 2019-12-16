@@ -46,4 +46,4 @@ jobs:
             - ssh-add $SHIPPABLEPUSHPUBLICREPOS_PRIVATE_KEY_PATH
             - ssh -T git@github.com || true
             - git config --global user.name 'shippable-push-public-repos'
-            - cd $KENDOINTLREPO_STATE && git config --list && git remote -v && git checkout -b test && git commit -m 'alabala' --allow-empty && git push -u origin test
+            - cd $KENDOINTLREPO_STATE && git remote set-url --push origin git@github.com:telerik/kendo-intl.git && git remote -v && git checkout -b test && git commit -m 'alabala' --allow-empty && git push -u origin test
