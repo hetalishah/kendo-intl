@@ -45,4 +45,4 @@ jobs:
           script:
             - ssh-add $SHIPPABLEPUSHPUBLICREPOS_PRIVATE_KEY_PATH
             - ssh -T git@github.com || true
-            - cd $KENDOINTLREPO_STATE && git checkout -b test && git commit -m "chore: test" --allow-empty && git push -u origin test
+            - cd $KENDOINTLREPO_STATE && git checkout -b test && git commit -m 'chore: test' --allow-empty && git push -u origin test
